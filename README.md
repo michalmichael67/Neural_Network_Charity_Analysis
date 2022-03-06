@@ -23,14 +23,17 @@ In this analysis, we pre-proccessed the data and then compiled trained and valua
 **Data Preprocessing**
 
 - What variable(s) are considered the target(s) for your model?
+
 The variable that we are trying to predict is the "IS_SUCCESSFUL" column - namely did the funded company use the money effectively?
 - What variable(s) are considered to be the features for your model?
+
 The variables considered to be features are all columns in the data frame besides the "IS_SUCCESSFUL" column.
 
 Below see a screenshot of the data being split into a target and feature arrays:
 ![feature_target.png](Resources/feature_target.png)
 
 - What variable(s) are neither targets nor features, and should be removed from the input data?
+
 In our case, we removed EIN and NAME because they had little to no impact on the outcome of our analysis
 
 Below see a screenshot of the variables that were removed:
@@ -39,17 +42,21 @@ Below see a screenshot of the variables that were removed:
 **Compiling, Training, and Evaluating the Model**
 
 - How many neurons, layers, and activation functions did you select for your neural network model, and why?
+
 For the initial neural network model, there were 2 hidden layers. The first layer had 80 neurons and the second hadd 30. The hidden layers used the ReLu activation function and the output layer used the Sigmoid activation function.
 
 ![training_initial.png](Resources/training_initial.png)
 
 - Were you able to achieve the target model performance?
+
 The target model performance was 75% but in this attempt, the model performance was 73.12%.
 
 ![acc_initial.png](Resources/acc_initial.png)
 
 - What steps did you take to try and increase model performance?
+
 In order to improve performace, I tried 3 different tactics:
+
 1. Added a third hidden layer but kept the activation function the same. 
 ![training_att_1.png](Resources/training_att_1.png)
 
